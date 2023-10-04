@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<head>
+    <meta charset="utf-8">
+    <title>PayCore.io Merchant Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script src="https://unpkg.com/@paycore/merchant-widget-js@0.3.0/dist/merchantWidget.umd.js"></script>
+<div id="merchant-widget-mount-point" style="width: 375px; height: 600px;"></div>
+<script>
+    window.widget.init({
+        public_key: "pk_test_13d4d8447406e14c27d515a1a7e7e4dd47dd40ecbb259e6ee573eec16ec4e5135310b1e9fb853f8e031a351740852f6f91fa0354f3fab9af2ed1c9da11c23cfd", // replace the value with your commerce public key
+        baseUrl: "https://papi.yeah.store/hpp/",
+        flow: "iframe",
+        selector: "merchant-widget-mount-point",
+        amount: 10,
+        currency: "USD",
+        language: "en",
+        description: "Simple description of your payment operation.",
+        reference_id: "",
+        metadata: {
+            key: "value"
+        },
+        display: {
+            hide_header: false,
+            hide_footer: false,
+            hide_progress_bar: false,
+            hide_method_filter: false,
+            hide_lifetime_counter: false
+        }
+    });
+</script>
+</body>
+</html>
